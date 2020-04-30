@@ -2,25 +2,23 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
 // Copied from VendingMachine.java in lab_Snackbar
 public class DrawCircle extends JPanel
                             implements ActionListener{
 
-	int centerX = this.getWidth()/2;
-	int centerY = this.getHeight()/2;
-	Color y = Color.green;
 	// Draws the color wheel. 
 	 public void paintComponent(Graphics g)
 	  {
+	    int centerX = this.getWidth()/2;
+	    int centerY = this.getHeight()/2;
+		
 	    super.paintComponent(g);
-	    g.setColor(Color.RED);
-	    g.fillArc(getWidth()/2 - 100, getHeight()/2 - 100, 200, 200, 0, 120);
 	    g.setColor(Color.GREEN);
-	    g.fillArc(getWidth()/2 - 100, getHeight()/2 - 100, 200, 200, 120, 120);
+	    g.fillArc(centerX - 100, centerY - 100, 200, 200, 0, 120);
+	    g.setColor(Color.RED);
+	    g.fillArc(centerX - 100, centerY - 100, 200, 200, 120, 120);
 	    g.setColor(Color.BLUE);
-	    g.fillArc(getWidth()/2 - 100, getHeight()/2 - 100, 200, 200, 240, 120);
-	    
+	    g.fillArc(centerX - 100, centerY - 100, 200, 200, 240, 120);
 	  }
 	
 	 // This might be unnecessary, depends on if we want a button or not.
