@@ -7,14 +7,19 @@ import javax.swing.*;
 public class DrawCircle extends JPanel
                             implements ActionListener{
 
-	Color y = Color.green;
 	int centerX = this.getWidth()/2;
 	int centerY = this.getHeight()/2;
+	Color y = Color.green;
 	// Draws the color wheel. 
 	 public void paintComponent(Graphics g)
 	  {
 	    super.paintComponent(g);
 	    g.setColor(Color.RED);
+	    g.fillArc(getWidth()/2 - 100, getHeight()/2 - 100, 200, 200, 0, 120);
+	    g.setColor(Color.GREEN);
+	    g.fillArc(getWidth()/2 - 100, getHeight()/2 - 100, 200, 200, 120, 120);
+	    g.setColor(Color.BLUE);
+	    g.fillArc(getWidth()/2 - 100, getHeight()/2 - 100, 200, 200, 240, 120);
 	    
 	  }
 	
