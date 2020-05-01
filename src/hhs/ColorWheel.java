@@ -1,9 +1,11 @@
+package hhs;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 // Copied from VendingMachine.java in lab_Snackbar
-public class DrawCircle extends JPanel implements ActionListener {
+public class ColorWheel extends JPanel implements ActionListener {
 
 	// Draws the color wheel.
 	public void paintComponent(Graphics g) {
@@ -136,7 +138,7 @@ public class DrawCircle extends JPanel implements ActionListener {
 		frame.setBounds(600, 300, 700, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container c = frame.getContentPane();
-		c.add(new DrawCircle());
+		c.add(new ColorWheel());
 		frame.setVisible(true);
 	}
 }
