@@ -23,12 +23,8 @@ public class DrawCircle extends JPanel
 		super.paintComponent(g);
 	    super.paintComponent(g2);
 	    g2.setPaint(gradient);
-	    //g.fillOval(centerX - 100, centerY - 100, 200, 200);
-	    //g.setColor(Color.GREEN);
 	    g2.fillArc(centerX - 100, centerY - 100, 200, 200, 0, 120);
-	    //g.setColor(Color.RED);
 	    g2.fillArc(centerX - 100, centerY - 100, 200, 200, 120, 120);
-	    //g.setColor(Color.BLUE);
 	    g2.fillArc(centerX - 100, centerY - 100, 200, 200, 240, 120);
 	    
 	}
