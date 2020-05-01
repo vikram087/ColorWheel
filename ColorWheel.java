@@ -39,6 +39,7 @@ public class DrawCircle extends JPanel
 	
 	}
 	
+// test
 	public static void main(String[] args)
 	{
 	    JFrame frame = new JFrame("ColorWheel");
