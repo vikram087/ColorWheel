@@ -24,6 +24,8 @@ public class ColorWheel extends JPanel implements ActionListener
 	// Draws the color wheel.
 	public void paintComponent(Graphics g) 
 	{
+		
+//First attempt, used Radial Gradient paint, didn't produce the product needed		
 //		float[] fractions = new float[] { (float) 1 / 5, (float) 2 / 8, (float) 3 / 8, (float) 4 / 8, (float) 5 / 8,
 //				(float) 6 / 8, (float) 7 / 8, (float) 1 };
 //		Color[] colors = new Color[] { Color.GREEN, Color.CYAN, Color.BLUE, Color.MAGENTA, Color.PINK, Color.RED,
@@ -43,13 +45,6 @@ public class ColorWheel extends JPanel implements ActionListener
 //	    g2.fillArc(centerX - 100, centerY - 100, 200, 200, 0, 120);
 //	    g2.fillArc(centerX - 100, centerY - 100, 200, 200, 120, 120);
 //	    g2.fillArc(centerX - 100, centerY - 100, 200, 200, 240, 120);	    
-//		
-		
-		int centerX = this.getWidth() / 2;
-		int centerY = this.getHeight() / 2;
-		
-		super.paintComponent(g);
-		Graphics2D g2 = (Graphics2D) g.create();
 		
 		// Basic Color Wheel
 		
@@ -57,9 +52,15 @@ public class ColorWheel extends JPanel implements ActionListener
 		// KNOWN BUGS: 
 		// GREEN RUNS  4 TIMES WHILE BLUE ONLY RUNS ONCE. Besides that, FINDING 
 		// BRIGHTNESS OF COLORS FOR THE SHADES OF GREEN AND BLUE.
-		double angle = 0;
-		int fixedAngle = 36;
-		int x = 0;
+
+//		int centerX = this.getWidth() / 2;
+//		int centerY = this.getHeight() / 2;
+		
+//		super.paintComponent(g);
+		
+//		int angle = 0;
+//		int fixedAngle = 36;
+//		int x = 0;
 //		while (x <= 9) 
 //		{
 //			// RED
@@ -148,48 +149,62 @@ public class ColorWheel extends JPanel implements ActionListener
 //			x++;
 //		}
 		
-		double addedAngle = 0.2353;
-		int maxWhite = 255;
 		
+		/**
+		 * REV 2, 5/2/2020
+		 * KNOWN BUGS: GRADIENT ACHIEVED FOR EACH INDIVIDUAL COLOR
+		 * BUT DOES NOT HAVE SMOOTH TRANSITIONS
+		 */
 		
-		for(int rgb = 0; rgb <= maxWhite; rgb++)
+		int centerX = this.getWidth() / 2;
+		int centerY = this.getHeight() / 2;
+		
+		super.paintComponent(g);
+		Graphics2D g2 = (Graphics2D) g.create();//used graphics 2D
+		
+		double angle = 0;
+		double addedAngle = 0.234375;//the angle measure for each angle
+		int maxWhite = 255;//max rgb value
+		
+		for(int rgb = 0; rgb <= maxWhite; rgb++)//0-255 rgb values
 		{
-			g2.setPaint(new Color(255, rgb, rgb));
+			g2.setPaint(new Color(255, rgb, rgb));//red
 			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
 		for(int rgb = maxWhite; rgb >= 0; rgb--)
 		{
-			g2.setColor(new Color(255, 255, rgb));
+			g2.setColor(new Color(255, 255, rgb));//yellow
 			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
 		for(int rgb = 0; rgb <= maxWhite; rgb++)
 		{
-			g2.setColor(new Color(rgb, 255, rgb));
+			g2.setColor(new Color(rgb, 255, rgb));//green
 			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
 		for(int rgb = maxWhite; rgb >= 0; rgb--)
 		{
-			g2.setColor(new Color(rgb, 255, 255));
+			g2.setColor(new Color(rgb, 255, 255));//cyan
 			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
 		for(int rgb = 0; rgb <= maxWhite; rgb++)
 		{
-			g2.setColor(new Color(rgb, rgb, 255));
+			g2.setColor(new Color(rgb, rgb, 255));//blue
 			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
 		for(int rgb = maxWhite; rgb >= 0; rgb--)
 		{
-			g2.setColor(new Color(255, rgb, 255));
+			g2.setColor(new Color(255, rgb, 255));//magenta
 			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
-		}
+		}	
+			
+//tried all possible color combos, program cannot handle it
 		
-				
 //		for (int red = 0; red <= 255; red++)
 //		{
 //			for(int green = 0; green <= 255; green++)
@@ -197,20 +212,11 @@ public class ColorWheel extends JPanel implements ActionListener
 //				for(int blue = 0; blue <= 255; blue++)
 //				{
 //					g2.setColor(new Color(red, green, blue));
-//					g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, 1/(256*256*256), Arc2D.PIE));
-//					angle = angle + addedAngle;
+//					g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, 1/(Math.pow(2, 24)), Arc2D.PIE));
+//					angle = angle + 1/(Math.pow(2, 24));
 //				}
 //			}
 //		}
-				
-//		for (int rbg = 255; rbg >= 0; rbg--)
-//		{
-//			g.setColor(new Color(rbg, rbg, rbg));
-//			g.fillArc(centerX - 100, centerY - 100, 200, 200, angle, 2);
-//			angle = angle + 2;
-//		}
-		
-		
 	}	
 	
 	// This might be unnecessary, depends on if we want a button or not.
