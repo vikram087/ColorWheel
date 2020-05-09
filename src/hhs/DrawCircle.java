@@ -2,14 +2,27 @@ package hhs;
 import java.awt.*;
 import java.awt.geom.Arc2D;
 
-// Commit test
 /**
  * REV 2, 5/5/2020
  * KNOWN BUGS: GRADIENT ACHIEVED FOR EACH INDIVIDUAL COLOR
  * BUT DOES NOT HAVE SMOOTH TRANSITIONS
  */
 
-public class DrawCircle {
+/** 
+Author: Vikram Penumarti
+Date: 4/30/2020
+Rev: 01
+Notes:
+*/
+
+/**
+ * Author: Richard Zhang
+ * Date: 4/30/2020
+ * Rev:03
+ * Notes: The class for drawing a color wheel. Created the basic color wheel using if statements.
+ */
+
+public class DrawCircle  {
 	
 	public void draw(int centerX, int centerY, Graphics2D g2) {
 		
