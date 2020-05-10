@@ -37,11 +37,13 @@ public class ColorWheel extends JPanel implements ActionListener, MouseListener 
 	public void paintComponent(Graphics g) {
 		int centerX = this.getWidth() / 2;
 		int centerY = this.getHeight() / 2;
+		
 //		System.out.println(centerX + ", " + centerY);
 		DrawCircle circle = new DrawCircle();
 
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g.create();
+		
 		circle.draw(centerX, centerY, g2);
 	}
 
@@ -75,7 +77,8 @@ public class ColorWheel extends JPanel implements ActionListener, MouseListener 
 // test
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("ColorWheel");
-		frame.setBounds(600, 300, 716, 740);
+		frame.setResizable(true);
+		frame.setBounds(600, 300, 740, 740);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container c = frame.getContentPane();
 		c.add(new ColorWheel());

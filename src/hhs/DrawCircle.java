@@ -26,7 +26,11 @@ public class DrawCircle  {
 	
 	public void draw(int centerX, int centerY, Graphics2D g2) {
 		
-
+		double sizeX = centerX * 2 / 3;// 4/3 ratio from frame to arc
+		double sizeY = centerY * 2 / 3;
+		
+		//System.out.println(centerX + "," + centerY);
+		
 		double angle = 0;
 		double addedAngle = 0.2353;
 		int maxWhite = 255;
@@ -35,37 +39,37 @@ public class DrawCircle  {
 		for (int rgb = 0; rgb <= maxWhite; rgb++)
 		{
 			g2.setPaint(new Color(255, rgb, rgb));//red
-			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
+			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
 		for (int rgb = maxWhite; rgb >= 0; rgb--)
 		{
 			g2.setColor(new Color(255, 255, rgb));//purple
-			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
+			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
 		for (int rgb = 0; rgb <= maxWhite; rgb++)
 		{
 			g2.setColor(new Color(rgb, 255, rgb));//blue
-			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
+			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
 		for (int rgb = maxWhite; rgb >= 0; rgb--) 
 		{
 			g2.setColor(new Color(rgb, 255, 255));//cyan
-			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
+			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
 		for (int rgb = 0; rgb <= maxWhite; rgb++) 
 		{
 			g2.setColor(new Color(rgb, rgb, 255));//green
-			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
+			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
 		for (int rgb = maxWhite; rgb >= 0; rgb--)
 		{
 			g2.setColor(new Color(255, rgb, 255));//yellow
-			g2.fill(new Arc2D.Double(centerX - 100, centerY - 100, 200, 200, angle, addedAngle, Arc2D.PIE));
+			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
 	}
