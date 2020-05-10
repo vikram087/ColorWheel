@@ -37,13 +37,13 @@ public class ColorWheel extends JPanel implements ActionListener, MouseListener 
 	public void paintComponent(Graphics g) {
 		int centerX = this.getWidth() / 2;
 		int centerY = this.getHeight() / 2;
-		
+
 //		System.out.println(centerX + ", " + centerY);
 		DrawCircle circle = new DrawCircle();
 
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g.create();
-		
+
 		circle.draw(centerX, centerY, g2);
 	}
 
@@ -53,12 +53,44 @@ public class ColorWheel extends JPanel implements ActionListener, MouseListener 
 
 	}
 
+	
+	// Dumb question but how can I make this angle have a assigned value outside the method.
 	public void mouseClicked(MouseEvent mouse) {
 		x = mouse.getX();
 		y = mouse.getY();
 		click = true;
 		repaint();
-		System.out.println(x + ", " + y);
+		int angleX = x - this.getWidth() / 2;
+
+		// Why is this height - click idk but yeah
+		int angleY = this.getHeight() / 2 - y;
+
+		
+		// Quad 1
+		if (angleX > 0 && angleY > 0) {
+			angle = (int) Math.atan((double) angleY / angleX);
+			System.out.println("angle: " + angle);
+		}
+		
+		// Quad 2
+		if (angleX < 0 && angleY > 0) {
+			angle = (int) (180 + 180 * Math.atan((double) angleY / angleX) / Math.PI);
+			System.out.println("angle: " + angle);
+		}
+		
+		// Quad 3
+		if (angleX < 0 && angleY < 0) {
+			angle = (int) (180 + 180 * Math.atan((double) angleY / angleX) / Math.PI);
+			System.out.println("angle: " + angle);
+		}
+		
+		// Quad 4
+		if (angleX > 0 && angleY < 0) {
+			angle = (int) (360 + 180 * Math.atan((double) angleY / angleX) / Math.PI);
+			System.out.println("angle: " + angle);
+		}
+		System.out.println("x: " + angleX);
+		System.out.println("y: " + angleY);
 	}
 
 	// Unnecessary Methods
