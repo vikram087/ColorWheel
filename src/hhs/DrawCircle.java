@@ -1,13 +1,3 @@
-package hhs;
-import java.awt.*;
-import java.awt.geom.Arc2D;
-
-/**
- * REV 2, 5/5/2020
- * KNOWN BUGS: GRADIENT ACHIEVED FOR EACH INDIVIDUAL COLOR
- * BUT DOES NOT HAVE SMOOTH TRANSITIONS
- */
-
 /** 
 Author: Vikram Penumarti
 Date: 4/30/2020
@@ -20,6 +10,17 @@ Notes:
  * Date: 4/30/2020
  * Rev:03
  * Notes: The class for drawing a color wheel. Created the basic color wheel using if statements.
+ */
+
+package hhs;
+
+import java.awt.*;
+import java.awt.geom.Arc2D;
+
+/**
+ * REV 2, 5/5/2020
+ * KNOWN BUGS: GRADIENT ACHIEVED FOR EACH INDIVIDUAL COLOR
+ * BUT DOES NOT HAVE SMOOTH TRANSITIONS
  */
 
 public class DrawCircle  {
@@ -43,7 +44,7 @@ public class DrawCircle  {
 			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
-		for (int rgb = maxWhite; rgb >= 0; rgb--)
+		for (int rgb = 0; rgb <= maxWhite; rgb++)
 		{
 			g2.setColor(new Color(255, 255, rgb));//purple
 			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
@@ -55,7 +56,7 @@ public class DrawCircle  {
 			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
-		for (int rgb = maxWhite; rgb >= 0; rgb--) 
+		for (int rgb = 0; rgb <= maxWhite; rgb++) 
 		{
 			g2.setColor(new Color(rgb, 255, 255));//cyan
 			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
@@ -67,7 +68,7 @@ public class DrawCircle  {
 			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
 			angle = angle + addedAngle;
 		}
-		for (int rgb = maxWhite; rgb >= 0; rgb--)
+		for (int rgb = 0; rgb <= maxWhite; rgb++)
 		{
 			g2.setColor(new Color(255, rgb, 255));//yellow
 			g2.fill(new Arc2D.Double(centerX - sizeX / 2, centerY - sizeY / 2, sizeX, sizeY, angle, addedAngle, Arc2D.PIE));
