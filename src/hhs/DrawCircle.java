@@ -26,6 +26,7 @@ public class DrawCircle  {
 	
 	public void draw(int centerX, int centerY, Graphics2D g2) {
 		
+
 		double sizeX = centerX * 2 / 3;// 4/3 ratio from frame to arc
 		double sizeY = centerY * 2 / 3;
 		

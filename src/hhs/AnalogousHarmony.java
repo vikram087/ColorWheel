@@ -1,16 +1,3 @@
-/** 
-Author: Vikram Penumarti
-Date: 4/30/2020
-Rev: 01
-Notes:
-*/
-
-/**
- * Author: Richard Zhang
- * Date: 4/30/2020
- * Rev:01
- * Notes: 
- */
 package hhs;
 
 import java.awt.Color;
@@ -21,7 +8,6 @@ public class AnalogousHarmony implements ColorHarmony{
 	public Color color() {
 		return null;
 	}
-
 	// Override
 	public void getColor() {
 		

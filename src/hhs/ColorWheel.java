@@ -8,7 +8,7 @@ Notes:
 /**
  * Author: Richard Zhang
  * Date: 4/30/2020
- * Rev:03
+ * Rev:05
  * Notes: The class for drawing a color wheel. Created the basic color wheel using if statements.
  */
 
@@ -21,9 +21,10 @@ import javax.swing.*;
 
 // implements ActionListener, MouseListener
 // extends JPanel
-public class ColorWheel extends JPanel implements ActionListener, MouseListener {
-	boolean click;
-	int x, y, angle;
+public class ColorWheel extends JPanel implements MouseListener {
+	private boolean click;
+	private int x, y; 
+	private int angle;
 	// Not sure if angle is needed.
 
 	public ColorWheel() {
@@ -47,13 +48,6 @@ public class ColorWheel extends JPanel implements ActionListener, MouseListener 
 		circle.draw(centerX, centerY, g2);
 	}
 
-	// This might be unnecessary, depends on if we want a button or not.
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-
-	}
-
-	
 	// Dumb question but how can I make this angle have a assigned value outside the method.
 	public void mouseClicked(MouseEvent mouse) {
 		x = mouse.getX();
@@ -68,7 +62,7 @@ public class ColorWheel extends JPanel implements ActionListener, MouseListener 
 		
 		// Quad 1
 		if (angleX > 0 && angleY > 0) {
-			angle = (int) Math.atan((double) angleY / angleX);
+			angle = (int) (180*Math.atan((double) angleY / angleX)/Math.PI);
 			System.out.println("angle: " + angle);
 		}
 		
@@ -106,6 +100,12 @@ public class ColorWheel extends JPanel implements ActionListener, MouseListener 
 	public void mouseReleased(MouseEvent mouse) {
 	}
 
+	// Accessor method
+	public int getAngle() {
+		
+	return angle;
+	}
+	
 // test
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("ColorWheel");
