@@ -16,6 +16,7 @@ package hhs;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Scanner;
 
 import javax.swing.*;
 
@@ -23,7 +24,7 @@ import javax.swing.*;
 // extends JPanel
 public class ColorWheel extends JPanel implements MouseListener {
 	private boolean click;
-	private int x, y; 
+	private int x, y;
 	private double angle;
 	private int colorA;
 	// Not sure if angle is needed.
@@ -35,7 +36,7 @@ public class ColorWheel extends JPanel implements MouseListener {
 		y = 0;
 		angle = 0;
 	}
-	
+
 	public void paintComponent(Graphics g) {
 		int centerX = this.getWidth() / 2;
 		int centerY = this.getHeight() / 2;
@@ -49,99 +50,148 @@ public class ColorWheel extends JPanel implements MouseListener {
 		circle.draw(centerX, centerY, g2);
 	}
 
-	// Dumb question but how can I make this angle have a assigned value outside the method.
 	public void mouseClicked(MouseEvent mouse) {
-		
-		ComplementaryHarmony test = new ComplementaryHarmony();
-		
+
+		ComplementaryHarmony complementaryTest = new ComplementaryHarmony();
+		MonochromaticHarmony monochromaticTest = new MonochromaticHarmony();
+
 		int angleInt = 0;
-		
+
 		x = mouse.getX();
 		y = mouse.getY();
 		click = true;
-		repaint();
+		String input = "";
+		Scanner kboard = new Scanner(System.in);
+
 		int angleX = x - this.getWidth() / 2;
 
-		// Why is this height - click idk but yeah
 		int angleY = this.getHeight() / 2 - y;
-		
+
 		// Quad 1
-		if (angleX > 0 && angleY > 0) 
-		{
-			angle = (180*Math.atan((double) angleY / angleX)/Math.PI);
-			angleInt = (int)angle;
+		System.out.println("What Harmony do you choose?");
+		System.out.println("Complementary, Monochromatic, Analogous, Split, Triadic, Tetradic.");
+		input = kboard.next();
+		if (angleX > 0 && angleY > 0) {
+			angle = (180 * Math.atan((double) angleY / angleX) / Math.PI);
+			angleInt = (int) angle;
 			System.out.println("angle: " + angle);
-			
-			colorA = (int)((double)angle/0.2353);
-			
-			if (angle >= 0 && angle <= 60)
-			{
-				test.findHarmonyRed(colorA, angleInt);//segment for red
+
+			colorA = (int) ((double) angle / 0.2353);
+
+			if (angle >= 0 && angle <= 60) {
+				if (input.equalsIgnoreCase("complementary")) {
+					complementaryTest.findHarmonyRed(colorA, angleInt);// segment for red
+				}
+				if (input.equalsIgnoreCase("monochromatic")) {
+					monochromaticTest.findHarmonyRed(colorA, angleInt);
+				}
 			}
-			
-			else if (angle > 60 && angle < 90)//segment for yellow in Q1
+
+			else if (angle > 60 && angle < 90)// segment for yellow in Q1
 			{
-				test.findHarmonyYellow(colorA, angleInt);
+				if (input.equalsIgnoreCase("complementary")) {
+
+					complementaryTest.findHarmonyYellow(colorA, angleInt);
+				}
+
+				if (input.equalsIgnoreCase("monochromatic")) {
+					monochromaticTest.findHarmonyYellow(colorA, angleInt);
+				}
 			}
 		}
-		
+
 		// Quad 2
 		if (angleX < 0 && angleY > 0) {
 			angle = (int) (180 + 180 * Math.atan((double) angleY / angleX) / Math.PI);
-			angleInt = (int)angle;
+			angleInt = (int) angle;
 			System.out.println("angle: " + angle);
-			
-			colorA = (int)((double)angle/0.2353);
-			
-			if (angle > 90 && angle <= 120)//segment for yellow in Q2
+
+			colorA = (int) ((double) angle / 0.2353);
+
+			if (angle > 90 && angle <= 120)// segment for yellow in Q2
 			{
-				test.findHarmonyYellow(colorA, angleInt);
+				if (input.equalsIgnoreCase("complementary")) {
+
+					complementaryTest.findHarmonyYellow(colorA, angleInt);
+				}
+				if (input.equalsIgnoreCase("monochromatic")) {
+					monochromaticTest.findHarmonyYellow(colorA, angleInt);
+				}
 			}
-			
-			else if (angle > 120 && angle <= 180)//green
+
+			else if (angle > 120 && angle <= 180)// green
 			{
-				test.findHarmonyGreen(colorA, angleInt);
+				if (input.equalsIgnoreCase("complementary")) {
+
+					complementaryTest.findHarmonyGreen(colorA, angleInt);
+				}
+				if (input.equalsIgnoreCase("monochromatic")) {
+					monochromaticTest.findHarmonyGreen(colorA, angleInt);
+				}
 			}
 		}
-		
+
 		// Quad 3
 		if (angleX < 0 && angleY < 0) {
 			angle = (int) (180 + 180 * Math.atan((double) angleY / angleX) / Math.PI);
-			angleInt = (int)angle;
+			angleInt = (int) angle;
 			System.out.println("angle: " + angle);
-			
-			colorA = (int)((double)angle/0.2353);
-			
-			if (angle > 180 && angle <= 240)//cyan
+
+			colorA = (int) ((double) angle / 0.2353);
+
+			if (angle > 180 && angle <= 240)// cyan
 			{
-				test.findHarmonyCyan(colorA, angleInt);
+				if (input.equalsIgnoreCase("complementary")) {
+					complementaryTest.findHarmonyCyan(colorA, angleInt);
+				}
+				if (input.equalsIgnoreCase("monochromatic")) {
+					monochromaticTest.findHarmonyCyan(colorA, angleInt);
+				}
 			}
-			
-			else if (angle > 240 && angle <= 270)//blue Q3
+
+			else if (angle > 240 && angle <= 270)// blue Q3
 			{
-				test.findHarmonyBlue(colorA, angleInt);
+				if (input.equalsIgnoreCase("complementary")) {
+
+					complementaryTest.findHarmonyBlue(colorA, angleInt);
+				}
+				if (input.equalsIgnoreCase("monochromatic")) {
+					monochromaticTest.findHarmonyBlue(colorA, angleInt);
+				}
 			}
 		}
-		
+
 		// Quad 4
 		if (angleX > 0 && angleY < 0) {
 			angle = (int) (360 + 180 * Math.atan((double) angleY / angleX) / Math.PI);
-			angleInt = (int)angle;
+			angleInt = (int) angle;
 			System.out.println("angle: " + angle);
-			
-			colorA = (int)((double)angle/0.2353);
-		
-			if (angle > 270 && angle <= 300)//blue Q4
+
+			colorA = (int) ((double) angle / 0.2353);
+
+			if (angle > 270 && angle <= 300)// blue Q4
 			{
-				test.findHarmonyBlue(colorA, angleInt);
+				if (input.equalsIgnoreCase("complementary")) {
+
+					complementaryTest.findHarmonyBlue(colorA, angleInt);
+				}
+				if (input.equalsIgnoreCase("monochromatic")) {
+					monochromaticTest.findHarmonyBlue(colorA, angleInt);
+				}
 			}
-			
-			else if (angle > 300 && angle <= 360)//purple
+
+			else if (angle > 300 && angle <= 360)// purple
 			{
-				test.findHarmonyPurple(colorA, angleInt);
+				if (input.equalsIgnoreCase("complementary")) {
+
+					complementaryTest.findHarmonyPurple(colorA, angleInt);
+				}
+				if (input.equalsIgnoreCase("monochromatic")) {
+					monochromaticTest.findHarmonyPurple(colorA, angleInt);
+				}
 			}
 		}
-		
+
 		System.out.println("x: " + angleX);
 		System.out.println("y: " + angleY);
 	}
@@ -161,14 +211,14 @@ public class ColorWheel extends JPanel implements MouseListener {
 
 	// Accessor method
 	public double getAngle() {
-		
-	return angle;
+
+		return angle;
 	}
 
 	public int getColor() {
 		return colorA;
 	}
-	
+
 // test
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("ColorWheel");

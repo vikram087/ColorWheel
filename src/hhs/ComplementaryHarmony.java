@@ -1,16 +1,10 @@
 /** 
 Author: Vikram Penumarti
-Date: 4/30/2020
+Date: 5/10/2020
 Rev: 01
 Notes:
 */
 
-/**
- * Author: Richard Zhang
- * Date: 4/30/2020
- * Rev:05
- * Notes: The class for drawing a color wheel. Created the basic color wheel using if statements.
- */
 
 package hhs;
 
