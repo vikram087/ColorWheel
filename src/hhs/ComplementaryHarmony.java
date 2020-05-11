@@ -26,7 +26,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		if (angle >= 0 && angle <= 60)
 		{
 			System.out.println("initial rgb" + " " + blue + ", " + red + ", " + red);//initial and complementary rgbs
+			System.out.println("the chosen color is: red");//initial and complementary colors
 			System.out.println("Complementary rgb" + " " + red + ", " + green + ", " + blue);
+			System.out.println("the complementary color is: cyan");
 		}
 	}
 	
@@ -39,7 +41,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		if (angle > 60 && angle < 120)
 		{
 			System.out.println("initial rgb" + " " + -blue + ", " + -blue + ", " + green);
+			System.out.println("the chosen color is: yellow");
 			System.out.println("Complementary rgb" + " " + red + ", " + green + ", " + -blue);
+			System.out.println("the complementary color is: blue");
 		}
 	}
 
@@ -52,7 +56,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		if (angle >= 120 && angle < 180)
 		{
 			System.out.println("initial rgb" + " " + green + ", " + -blue + ", " + green);
+			System.out.println("the chosen color is: green");
 			System.out.println("Complementary rgb" + " " + -red + ", " + green + ", " + -blue);
+			System.out.println("the complementary color is: purple");
 		}
 	}
 	
@@ -65,7 +71,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		if (angle >= 180 && angle < 240)
 		{
 			System.out.println("initial rgb" + " " + green + "," + -red + "," + -red);
+			System.out.println("the chosen color is: cyan");
 			System.out.println("Complementary rgb" + " " + -red + "," + green + "," + blue);
+			System.out.println("the complementary color is: red");
 		}
 
 	}
@@ -79,7 +87,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		if (angle >= 240 && angle < 300)
 		{
 			System.out.println("initial rgb" + " " + blue + "," + blue + "," + -red);
+			System.out.println("the chosen color is: blue");
 			System.out.println("Complementary rgb" + " " + -red + "," + -green + "," + blue);
+			System.out.println("the complementary color is: yellow");
 		}
 
 	}
@@ -93,7 +103,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		if (angle >= 300 && angle < 360)
 		{
 			System.out.println("initial rgb" + " " + -green + "," + blue + "," + -green);
+			System.out.println("the chosen color is: purple");
 			System.out.println("Complementary rgb" + " " + red + "," + -green + "," + blue);
+			System.out.println("the complementary color is: green");
 		}
 	}
 }
