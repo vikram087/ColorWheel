@@ -7,7 +7,7 @@
 
 package hhs;
 
-public class ComplementaryHarmony implements ColorHarmony
+public class SplitHarmony implements ColorHarmony
 {
 	//harmonies for each color
 	public void findHarmonyRed(int color, int angle)//color is angle/arcLength //angle is starting angle of each segment 
@@ -20,8 +20,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + blue + ", " + red + ", " + red);//initial and complementary rgbs
 			System.out.println("the chosen color is: red");//initial and complementary colors
-			System.out.println("Complementary rgb" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the complementary color is: cyan");
+			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("the split colors are: ");
 		}
 	}
 	
@@ -35,8 +36,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + -blue + ", " + -blue + ", " + green);
 			System.out.println("the chosen color is: yellow");
-			System.out.println("Complementary rgb" + " " + red + ", " + green + ", " + -blue);
-			System.out.println("the complementary color is: blue");
+			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("the split colors are: ");
 		}
 	}
 
@@ -50,8 +52,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + green + ", " + -blue + ", " + green);
 			System.out.println("the chosen color is: green");
-			System.out.println("Complementary rgb" + " " + -red + ", " + green + ", " + -blue);
-			System.out.println("the complementary color is: purple");
+			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("the split colors are: ");
 		}
 	}
 	
@@ -65,8 +68,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + green + "," + -red + "," + -red);
 			System.out.println("the chosen color is: cyan");
-			System.out.println("Complementary rgb" + " " + -red + "," + green + "," + blue);
-			System.out.println("the complementary color is: red");
+			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("the split colors are: ");
 		}
 
 	}
@@ -81,8 +85,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + blue + "," + blue + "," + -red);
 			System.out.println("the chosen color is: blue");
-			System.out.println("Complementary rgb" + " " + -red + "," + -green + "," + blue);
-			System.out.println("the complementary color is: yellow");
+			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("the split colors are: ");
 		}
 
 	}
@@ -97,8 +102,9 @@ public class ComplementaryHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + -green + "," + blue + "," + -green);
 			System.out.println("the chosen color is: purple");
-			System.out.println("Complementary rgb" + " " + red + "," + -green + "," + blue);
-			System.out.println("the complementary color is: green");
+			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
+			System.out.println("the split colors are: ");
 		}
 	}
 }

@@ -1,8 +1,8 @@
 /** 
-Author: Vikram Penumarti
-Date: 4/30/2020
-Rev: 01
-Notes:
+ * Author: Vikram Penumarti
+ * Date: 5/10/2020
+ * Rev: 01
+ * Notes:
 */
 
 /**
@@ -23,11 +23,12 @@ import java.awt.geom.Arc2D;
  * BUT DOES NOT HAVE SMOOTH TRANSITIONS
  */
 
-public class DrawCircle  {
+public class DrawCircle  
+{
 	
-	public void draw(int centerX, int centerY, Graphics2D g2) {
+	public void draw(int centerX, int centerY, Graphics2D g2)
+	{
 		
-
 		double sizeX = centerX * 2 / 3;// 4/3 ratio from frame to arc
 		double sizeY = centerY * 2 / 3;
 		
