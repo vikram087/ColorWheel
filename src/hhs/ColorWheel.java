@@ -61,6 +61,7 @@ public class ColorWheel extends JPanel implements MouseListener
 		SplitHarmony splitTest = new SplitHarmony();
 		TetradicHarmony tetradicTest = new TetradicHarmony();
 		AnalogousHarmony analogousTest = new AnalogousHarmony();
+		TriadicHarmony triadicTest = new TriadicHarmony();
 		
 		int angleInt = 0;
 
@@ -109,7 +110,10 @@ public class ColorWheel extends JPanel implements MouseListener
 				{
 					analogousTest.findHarmonyRed(colorA, angleInt);
 				}
-			
+				if (input.equalsIgnoreCase("triadic")) 
+				{
+					triadicTest.findHarmonyRed(colorA, angleInt);
+				}
 			}
 
 			else if (angle > 60 && angle < 90)// segment for yellow in Q1
@@ -134,6 +138,10 @@ public class ColorWheel extends JPanel implements MouseListener
 				if (input.equalsIgnoreCase("analogous")) 
 				{
 					analogousTest.findHarmonyYellow(colorA, angleInt);
+				}
+				if (input.equalsIgnoreCase("triadic")) 
+				{
+					triadicTest.findHarmonyRed(colorA, angleInt);
 				}
 			}
 		}
@@ -170,6 +178,10 @@ public class ColorWheel extends JPanel implements MouseListener
 				{
 					analogousTest.findHarmonyYellow(colorA, angleInt);
 				}
+				if (input.equalsIgnoreCase("triadic")) 
+				{
+					triadicTest.findHarmonyRed(colorA, angleInt);
+				}
 			}
 
 			else if (angle > 120 && angle <= 180)// green
@@ -194,6 +206,10 @@ public class ColorWheel extends JPanel implements MouseListener
 				if (input.equalsIgnoreCase("analogous")) 
 				{
 					analogousTest.findHarmonyGreen(colorA, angleInt);
+				}
+				if (input.equalsIgnoreCase("triadic")) 
+				{
+					triadicTest.findHarmonyRed(colorA, angleInt);
 				}
 			}
 		}
@@ -229,6 +245,10 @@ public class ColorWheel extends JPanel implements MouseListener
 				{
 					analogousTest.findHarmonyCyan(colorA, angleInt);
 				}
+				if (input.equalsIgnoreCase("triadic")) 
+				{
+					triadicTest.findHarmonyRed(colorA, angleInt);
+				}
 			}
 
 			else if (angle > 240 && angle <= 270)// blue Q3
@@ -252,6 +272,10 @@ public class ColorWheel extends JPanel implements MouseListener
 				if (input.equalsIgnoreCase("analogous")) 
 				{
 					analogousTest.findHarmonyBlue(colorA, angleInt);
+				}
+				if (input.equalsIgnoreCase("triadic")) 
+				{
+					triadicTest.findHarmonyRed(colorA, angleInt);
 				}
 			}
 		}
@@ -287,6 +311,10 @@ public class ColorWheel extends JPanel implements MouseListener
 				{
 					analogousTest.findHarmonyBlue(colorA, angleInt);
 				}	
+				if (input.equalsIgnoreCase("triadic")) 
+				{
+					triadicTest.findHarmonyRed(colorA, angleInt);
+				}
 			}
 
 			else if (angle > 300 && angle <= 360)// purple
@@ -311,6 +339,10 @@ public class ColorWheel extends JPanel implements MouseListener
 				if (input.equalsIgnoreCase("analogous")) 
 				{
 					analogousTest.findHarmonyPurple(colorA, angleInt);
+				}
+				if (input.equalsIgnoreCase("triadic")) 
+				{
+					triadicTest.findHarmonyRed(colorA, angleInt);
 				}
 			}
 		}
