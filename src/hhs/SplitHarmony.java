@@ -20,9 +20,9 @@ public class SplitHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + blue + ", " + red + ", " + red);//initial and complementary rgbs
 			System.out.println("the chosen color is: red");//initial and complementary colors
-			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the split colors are: ");
+			System.out.println("split rgb 1:" + " " + red + ", " + green/2 + ", " + blue);
+			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue/2);
+			System.out.println("the split colors are: blue, green");
 		}
 	}
 	
@@ -36,9 +36,9 @@ public class SplitHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + -blue + ", " + -blue + ", " + green);
 			System.out.println("the chosen color is: yellow");
-			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the split colors are: ");
+			System.out.println("split rgb 1:" + " " + -blue/2 + ", " + green + ", " + -blue);
+			System.out.println("split rgb 2:" + " " + red + ", " + -blue/2 + ", " + -blue);
+			System.out.println("the split colors are: cyan, blue");
 		}
 	}
 
@@ -52,9 +52,9 @@ public class SplitHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + green + ", " + -blue + ", " + green);
 			System.out.println("the chosen color is: green");
-			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the split colors are: ");
+			System.out.println("split rgb 1:" + " " + -red + ", " + green + ", " + -blue/2);
+			System.out.println("split rgb 2:" + " " + -red/2 + ", " + green + ", " + -blue);
+			System.out.println("the split colors are: red, blue");
 		}
 	}
 	
@@ -68,9 +68,9 @@ public class SplitHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + green + "," + -red + "," + -red);
 			System.out.println("the chosen color is: cyan");
-			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the split colors are: ");
+			System.out.println("split rgb 1:" + " " + -red + ", " + -red/2 + ", " + blue);
+			System.out.println("split rgb 2:" + " " + -red + ", " + green + ", " + -red/2);
+			System.out.println("the split colors are: yellow, blue");
 		}
 
 	}
@@ -85,9 +85,9 @@ public class SplitHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + blue + "," + blue + "," + -red);
 			System.out.println("the chosen color is: blue");
-			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the split colors are: ");
+			System.out.println("split rgb 1:" + " " + -red/2 + ", " + -green + ", " + blue);
+			System.out.println("split rgb 2:" + " " + -red + ", " + -green/2 + ", " + blue);
+			System.out.println("the split colors are: green, red");
 		}
 
 	}
@@ -100,11 +100,11 @@ public class SplitHarmony implements ColorHarmony
 		
 		if (angle >= 300 && angle < 360)
 		{
-			System.out.println("initial rgb" + " " + -green + "," + blue + "," + -green);
+			System.out.println("initial rgb" + " " + -green + ", " + blue + ", " + -green);
 			System.out.println("the chosen color is: purple");
-			System.out.println("split rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("split rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the split colors are: ");
+			System.out.println("split rgb 1:" + " " + red + ", " + -green + ", " + -green/2);
+			System.out.println("split rgb 2:" + " " + -green/2 + ", " + -green + ", " + -blue);
+			System.out.println("the split colors are: green, cyan");
 		}
 	}
 }

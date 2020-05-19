@@ -21,9 +21,9 @@ public class TetradicHarmony implements ColorHarmony
 			System.out.println("initial rgb" + " " + blue + ", " + red + ", " + red);//initial and complementary rgbs
 			System.out.println("the chosen color is: red");//initial and complementary colors
 			System.out.println("tetradic rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 3:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the tetradic colors are: ");
+			System.out.println("tetradic rgb 2:" + " " + red + ", " + red + ", " + blue);
+			System.out.println("tetradic rgb 3:" + " " + blue + ", " + green + ", " + red);
+			System.out.println("the tetradic colors are: cyan, blue, yellow");
 		}
 	}
 	
@@ -37,10 +37,10 @@ public class TetradicHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + -blue + ", " + -blue + ", " + green);
 			System.out.println("the chosen color is: yellow");
-			System.out.println("tetradic rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 3:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the tetradic colors are: ");
+			System.out.println("tetradic rgb 1:" + " " + red + ", " + green + ", " + -blue);
+			System.out.println("tetradic rgb 2:" + " " + -blue + ", " + green + ", " + -blue);
+			System.out.println("tetradic rgb 3:" + " " + red + ", " + -blue + ", " + red);
+			System.out.println("the tetradic colors are: blue, purple, green");
 		}
 	}
 
@@ -54,10 +54,10 @@ public class TetradicHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + green + ", " + -blue + ", " + green);
 			System.out.println("the chosen color is: green");
-			System.out.println("tetradic rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 3:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the tetradic colors are: ");
+			System.out.println("tetradic rgb 1:" + " " + -red + ", " + green + ", " + -blue);
+			System.out.println("tetradic rgb 2:" + " " + -red + ", " + green + ", " + green);
+			System.out.println("tetradic rgb 3:" + " " + green + ", " + -red + ", " + -blue);
+			System.out.println("the tetradic colors are: purple, red, cyan");
 		}
 	}
 	
@@ -71,10 +71,10 @@ public class TetradicHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + green + "," + -red + "," + -red);
 			System.out.println("the chosen color is: cyan");
-			System.out.println("tetradic rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 3:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the tetradic colors are: ");
+			System.out.println("tetradic rgb 1:" + " " + -red + ", " + green + ", " + blue);
+			System.out.println("tetradic rgb 2:" + " " + -red + ", " + -red + ", " + blue);
+			System.out.println("tetradic rgb 3:" + " " + green + ", " + green + ", " + -red);
+			System.out.println("the tetradic colors are: red, yellow, blue");
 		}
 
 	}
@@ -89,10 +89,10 @@ public class TetradicHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + blue + "," + blue + "," + -red);
 			System.out.println("the chosen color is: blue");
-			System.out.println("tetradic rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 3:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the tetradic colors are: ");
+			System.out.println("tetradic rgb 1:" + " " + -red + ", " + -green + ", " + blue);
+			System.out.println("tetradic rgb 2:" + " " + blue + ", " + -green + ", " + blue);
+			System.out.println("tetradic rgb 3:" + " " + -red + ", " + blue + ", " + -green);
+			System.out.println("the tetradic colors are: yellow, green, purple");
 		}
 
 	}
@@ -107,10 +107,10 @@ public class TetradicHarmony implements ColorHarmony
 		{
 			System.out.println("initial rgb" + " " + -green + "," + blue + "," + -green);
 			System.out.println("the chosen color is: purple");
-			System.out.println("tetradic rgb 1:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 2:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("tetradic rgb 3:" + " " + red + ", " + green + ", " + blue);
-			System.out.println("the tetradic colors are: ");
+			System.out.println("tetradic rgb 1:" + " " + red + ", " + -green + ", " + blue);
+			System.out.println("tetradic rgb 2:" + " " + red + ", " + -green + ", " + -green);
+			System.out.println("tetradic rgb 3:" + " " + -green + ", " + red + ", " + blue);
+			System.out.println("the tetradic colors are: green, cyan, red");
 		}
 	}
 }
