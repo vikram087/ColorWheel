@@ -7,8 +7,8 @@
 
 /**
  * Author: Richard Zhang
- * Date: 4/30/2020
- * Rev:05
+ * Date:  5/21/2020
+ * Rev:06
  * Notes: The class for drawing a color wheel. Created the basic color wheel using if statements.
  */
 
@@ -141,7 +141,7 @@ public class ColorWheel extends JPanel implements MouseListener
 				}
 				if (input.equalsIgnoreCase("triadic")) 
 				{
-					triadicTest.findHarmonyRed(colorA, angleInt);
+					triadicTest.findHarmonyYellow(colorA, angleInt);
 				}
 			}
 		}
@@ -180,7 +180,7 @@ public class ColorWheel extends JPanel implements MouseListener
 				}
 				if (input.equalsIgnoreCase("triadic")) 
 				{
-					triadicTest.findHarmonyRed(colorA, angleInt);
+					triadicTest.findHarmonyYellow(colorA, angleInt);
 				}
 			}
 
@@ -209,7 +209,7 @@ public class ColorWheel extends JPanel implements MouseListener
 				}
 				if (input.equalsIgnoreCase("triadic")) 
 				{
-					triadicTest.findHarmonyRed(colorA, angleInt);
+					triadicTest.findHarmonyGreen(colorA, angleInt);
 				}
 			}
 		}
@@ -247,7 +247,7 @@ public class ColorWheel extends JPanel implements MouseListener
 				}
 				if (input.equalsIgnoreCase("triadic")) 
 				{
-					triadicTest.findHarmonyRed(colorA, angleInt);
+					triadicTest.findHarmonyCyan(colorA, angleInt);
 				}
 			}
 
@@ -275,7 +275,7 @@ public class ColorWheel extends JPanel implements MouseListener
 				}
 				if (input.equalsIgnoreCase("triadic")) 
 				{
-					triadicTest.findHarmonyRed(colorA, angleInt);
+					triadicTest.findHarmonyBlue(colorA, angleInt);
 				}
 			}
 		}
@@ -313,7 +313,7 @@ public class ColorWheel extends JPanel implements MouseListener
 				}	
 				if (input.equalsIgnoreCase("triadic")) 
 				{
-					triadicTest.findHarmonyRed(colorA, angleInt);
+					triadicTest.findHarmonyBlue(colorA, angleInt);
 				}
 			}
 
@@ -342,7 +342,7 @@ public class ColorWheel extends JPanel implements MouseListener
 				}
 				if (input.equalsIgnoreCase("triadic")) 
 				{
-					triadicTest.findHarmonyRed(colorA, angleInt);
+					triadicTest.findHarmonyPurple(colorA, angleInt);
 				}
 			}
 		}

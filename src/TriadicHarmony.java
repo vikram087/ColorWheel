@@ -1,14 +1,16 @@
 /**
  * Author: Richard Zhang
- * Date: 5/15/20
- * Rev:01
- * Notes:Code for Finding the Triadic Harmony from an input from the ColorWheel.
+ * Date: 5/21/20
+ * Rev:02
+ * Notes: Code for Finding the Triadic Harmony from an input from the ColorWheel.
  */
 
 
 
 public class TriadicHarmony implements ColorHarmony {
 	// harmonies for each color
+	
+	// Red
 	public void findHarmonyRed(int color, int angle)// color is angle/arcLength //angle is starting angle of each
 													// segment
 	{
@@ -34,6 +36,8 @@ public class TriadicHarmony implements ColorHarmony {
 		}
 	}
 
+	
+	// Yellow
 	public void findHarmonyYellow(int color, int angle) {
 		if (color > 255) {
 			color = 255;
@@ -56,6 +60,7 @@ public class TriadicHarmony implements ColorHarmony {
 		}
 	}
 
+	// Green
 	public void findHarmonyGreen(int color, int angle) {
 		if (color > 255) {
 			color = 255;
@@ -78,6 +83,7 @@ public class TriadicHarmony implements ColorHarmony {
 		}
 	}
 
+	// Cyan
 	public void findHarmonyCyan(int color, int angle) {
 		// R = 0, G = Original Color, B = Original Color
 		if (color > 255) {
@@ -103,6 +109,7 @@ public class TriadicHarmony implements ColorHarmony {
 
 	}
 
+	// Blue
 	public void findHarmonyBlue(int color, int angle) {
 		// R = 0, G = 0, B = Original Color
 		if (color > 255) {
@@ -127,6 +134,7 @@ public class TriadicHarmony implements ColorHarmony {
 
 	}
 
+	// Purple
 	public void findHarmonyPurple(int color, int angle) {
 		if (color > 255) {
 			color = 255;
