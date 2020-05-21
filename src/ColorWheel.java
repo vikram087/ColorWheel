@@ -12,8 +12,6 @@
  * Notes: The class for drawing a color wheel. Created the basic color wheel using if statements.
  */
 
-
-
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Scanner;
@@ -88,7 +86,7 @@ public class ColorWheel extends JPanel implements MouseListener
 
 			colorA = (int) ((double) angle / 0.2353);
 
-			if (angle >= 0 && angle <= 60)
+			if (angle >= 0 && angle <= 60)//conditionals deciding which class to use, and which method depending on angle clicked
 			{
 				if (input.equalsIgnoreCase("complementary")) 
 				{

@@ -5,8 +5,6 @@
  * Notes:
 */
 
-
-
 public class SplitHarmony implements ColorHarmony
 {
 	//harmonies for each color

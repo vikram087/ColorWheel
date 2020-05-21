@@ -5,9 +5,6 @@
  * Notes: Code for Finding the Triadic Harmony from an input from the ColorWheel.
  */
 
-
-
-
 public class MonochromaticHarmony implements ColorHarmony {
 	// harmonies for each color
 	

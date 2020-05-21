@@ -69,7 +69,7 @@ public class TetradicHarmony implements ColorHarmony
 		
 		if (angle >= 180 && angle < 240)
 		{
-			System.out.println("initial rgb" + " " + green + "," + -red + "," + -red);
+			System.out.println("initial rgb" + " " + green + ", " + -red + ", " + -red);
 			System.out.println("the chosen color is: cyan");
 			System.out.println("tetradic rgb 1:" + " " + -red + ", " + green + ", " + blue);
 			System.out.println("tetradic rgb 2:" + " " + -red + ", " + -red + ", " + blue);
@@ -105,7 +105,7 @@ public class TetradicHarmony implements ColorHarmony
 		
 		if (angle >= 300 && angle < 360)
 		{
-			System.out.println("initial rgb" + " " + -green + "," + blue + "," + -green);
+			System.out.println("initial rgb" + " " + -green + ", " + blue + ", " + -green);
 			System.out.println("the chosen color is: purple");
 			System.out.println("tetradic rgb 1:" + " " + red + ", " + -green + ", " + blue);
 			System.out.println("tetradic rgb 2:" + " " + red + ", " + -green + ", " + -green);

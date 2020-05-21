@@ -12,8 +12,6 @@
  * Notes: The class for drawing a color wheel. Created the basic color wheel using if statements.
  */
 
-
-
 public interface ColorHarmony {
 	
 	public void findHarmonyRed(int color, int angle);

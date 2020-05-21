@@ -5,8 +5,6 @@
  * Notes:
 */
 
-
-
 public class ComplementaryHarmony implements ColorHarmony
 {
 	//harmonies for each color
