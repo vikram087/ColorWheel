@@ -5,7 +5,7 @@
  * Notes:
 */
 
-package hhs;
+
 
 public class SplitHarmony implements ColorHarmony
 {

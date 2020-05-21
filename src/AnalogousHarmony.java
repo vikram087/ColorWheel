@@ -1,13 +1,14 @@
 /**
  * Author: Richard Zhang
- * Date: 5/15/20
+ * Date: 5/10/20
  * Rev:01
- * Notes:Code for Finding the Triadic Harmony from an input from the ColorWheel.
+ * Notes:
  */
 
-package hhs;
 
-public class TriadicHarmony implements ColorHarmony {
+
+
+public class AnalogousHarmony implements ColorHarmony {
 	// harmonies for each color
 	public void findHarmonyRed(int color, int angle)// color is angle/arcLength //angle is starting angle of each
 													// segment
@@ -15,18 +16,17 @@ public class TriadicHarmony implements ColorHarmony {
 		if (color > 255) {
 			color = 255;
 		}
-		// green
-		int red1 = 0;
-		int green1 = color;
+		// purple
+		int red1 = color;
+		int green1 = color/2;
 		int blue1 = 0;
 
-		// blue
-		int red2 = 0;
-		int green2 = 0;
-		int blue2 = color;
+		// yellow
+		int red2 = color;
+		int green2 = 0 ;
+		int blue2 = color/2;
 		if (angle >= 0 && angle <= 60) {
-			System.out.println("initial rgb" + " " + blue1 + ", " + red1 + ", " + red1);// initial and complementary
-																						// rgbs
+			System.out.println("initial rgb" + " " + blue1 + ", " + red1 + ", " + red1);// initial and complementary rgbs
 			System.out.println("the chosen color is: red");// initial and complementary colors
 			System.out.println("analogous rgb color 1:" + " " + red1 + ", " + green1 + ", " + blue1);
 			System.out.println("analogous rgb color 2:" + " " + red2 + ", " + green2 + ", " + blue2);
@@ -39,14 +39,14 @@ public class TriadicHarmony implements ColorHarmony {
 			color = 255;
 		}
 		// red
-		int red1 = 0;
+		int red1 = color / 2;
 		int green1 = color;
-		int blue1 = color;
+		int blue1 = 0;
 
 		// green
 		int red2 = color;
-		int green2 = 0;
-		int blue2 = color;
+		int green2 = color / 2;
+		int blue2 = 0;
 		if (angle > 60 && angle < 120) {
 			System.out.println("initial rgb" + " " + -blue1 + ", " + -blue1 + ", " + green1);
 			System.out.println("the chosen color is: yellow");
@@ -60,14 +60,15 @@ public class TriadicHarmony implements ColorHarmony {
 		if (color > 255) {
 			color = 255;
 		}
-		// blue
-		int red1 = 0;
-		int green1 = 0;
-		int blue1 = color;
+		// R = 0, G = Original Color, B = 0
+		// Yellow
+		int red1 =0;
+		int green1 = color;
+		int blue1 = color/2;
 
-		// red
-		int red2 = color;
-		int green2 = 0;
+		// cyan 
+		int red2 = color/2;
+		int green2 = color;
 		int blue2 = 0;
 		if (angle >= 120 && angle < 180) {
 			System.out.println("initial rgb" + " " + green1 + ", " + -blue1 + ", " + green1);
@@ -83,15 +84,15 @@ public class TriadicHarmony implements ColorHarmony {
 		if (color > 255) {
 			color = 255;
 		}
-		// yellow
-		int red1 = color;
-		int green1 = color ;
-		int blue1 = 0;
+		// blue
+		int red1 =0;
+		int green1 =color/2;
+		int blue1 = color;
 
-		// pink
-		int red2 = color;
-		int green2 = 0;
-		int blue2 = color;
+		// green
+		int red2 = 0;
+		int green2 = color;
+		int blue2 = color/2;
 
 		if (angle >= 180 && angle < 240) {
 			System.out.println("initial rgb" + " " + green1 + "," + -red1 + "," + -red1);
@@ -108,21 +109,21 @@ public class TriadicHarmony implements ColorHarmony {
 		if (color > 255) {
 			color = 255;
 		}
-		// red
-		int red1 = color;
-		int green1 =0;
-		int blue1 = 0;
+		// blue
+		int red1 =0;
+		int green1 = color/2;
+		int blue1 = color;
 
-		// green
-		int red2 = 0;
-		int green2 = color;
-		int blue2 = 0;
+		// purple
+		int red2 = color;
+		int green2 = 0;
+		int blue2 = color/2;
 		if (angle >= 240 && angle < 300) {
 			System.out.println("initial rgb" + " " + blue1 + "," + blue1 + "," + -red1);
 			System.out.println("the chosen color is: blue");
 			System.out.println("analogous rgb color 1:" + " " + red1 + ", " + green1 + ", " + blue1);
 			System.out.println("analogous rgb color 2:" + " " + red2 + ", " + green2 + ", " + blue2);
-			System.out.println("the analogous color is: red and green");
+			System.out.println("the analogous color is: cyan and purple");
 		}
 
 	}
@@ -131,14 +132,14 @@ public class TriadicHarmony implements ColorHarmony {
 		if (color > 255) {
 			color = 255;
 		}
-		// yellow
-		int red1 = color;
-		int green1 = color;
+		// red
+		int red1 =color;
+		int green1 = 0;
 		int blue1 = 0;
 
-		// Cyan
+		// blue
 		int red2 = 0;
-		int green2 = color;
+		int green2 = color/2;
 		int blue2 = color;
 		if (angle >= 300 && angle < 360) {
 			System.out.println("initial rgb" + " " + -green1 + "," + blue1 + "," + -green1);

@@ -12,7 +12,7 @@
  * Notes: The class for drawing a color wheel. Created the basic color wheel using if statements.
  */
 
-package hhs;
+
 
 import java.awt.*;
 import java.awt.geom.Arc2D;

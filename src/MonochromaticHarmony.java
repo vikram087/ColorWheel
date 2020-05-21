@@ -5,7 +5,8 @@
  * Notes:
  */
 
-package hhs;
+
+
 
 public class MonochromaticHarmony implements ColorHarmony {
 	// harmonies for each color
