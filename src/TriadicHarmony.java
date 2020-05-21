@@ -27,7 +27,7 @@ public class TriadicHarmony implements ColorHarmony {
 		int green2 = 0;
 		int blue2 = color;
 		if (angle >= 0 && angle <= 60) {
-			System.out.println("initial rgb" + " " + blue1 + ", " + red1 + ", " + red1);// initial and complementary
+			System.out.println("initial rgb" + " " + green1 + ", " + red1 + ", " + red1);// initial and complementary
 																						// rgbs
 			System.out.println("the chosen color is: red");// initial and complementary colors
 			System.out.println("analogous rgb color 1:" + " " + red1 + ", " + green1 + ", " + blue1);
@@ -52,7 +52,7 @@ public class TriadicHarmony implements ColorHarmony {
 		int green2 = 0;
 		int blue2 = color;
 		if (angle > 60 && angle < 120) {
-			System.out.println("initial rgb" + " " + -blue1 + ", " + -blue1 + ", " + green1);
+			System.out.println("initial rgb" + " " + blue1 + ", " + blue1 + ", " + green1);
 			System.out.println("the chosen color is: yellow");
 			System.out.println("analogous rgb color 1:" + " " + red1 + ", " + green1 + ", " + blue1);
 			System.out.println("analogous rgb color 2:" + " " + red2 + ", " + green2 + ", " + blue2);
@@ -75,7 +75,7 @@ public class TriadicHarmony implements ColorHarmony {
 		int green2 = 0;
 		int blue2 = 0;
 		if (angle >= 120 && angle < 180) {
-			System.out.println("initial rgb" + " " + green1 + ", " + -blue1 + ", " + green1);
+			System.out.println("initial rgb" + " " + green1 + ", " + blue1 + ", " + green1);
 			System.out.println("the chosen color is: green");
 			System.out.println("analogous rgb color 1:" + " " + red1 + ", " + green1 + ", " + blue1);
 			System.out.println("analogous rgb color 2:" + " " + red2 + ", " + green2 + ", " + blue2);
@@ -100,7 +100,7 @@ public class TriadicHarmony implements ColorHarmony {
 		int blue2 = color;
 
 		if (angle >= 180 && angle < 240) {
-			System.out.println("initial rgb" + " " + green1 + "," + -red1 + "," + -red1);
+			System.out.println("initial rgb" + " " + blue1 + "," + red1 + "," + red1);
 			System.out.println("the chosen color is: cyan");
 			System.out.println("analogous rgb color 1:" + " " + red1 + ", " + green1 + ", " + blue1);
 			System.out.println("analogous rgb color 2:" + " " + red2 + ", " + green2 + ", " + blue2);
@@ -125,7 +125,7 @@ public class TriadicHarmony implements ColorHarmony {
 		int green2 = color;
 		int blue2 = 0;
 		if (angle >= 240 && angle < 300) {
-			System.out.println("initial rgb" + " " + blue1 + "," + blue1 + "," + -red1);
+			System.out.println("initial rgb" + " " + blue1 + "," + blue1 + "," + 	red1);
 			System.out.println("the chosen color is: blue");
 			System.out.println("analogous rgb color 1:" + " " + red1 + ", " + green1 + ", " + blue1);
 			System.out.println("analogous rgb color 2:" + " " + red2 + ", " + green2 + ", " + blue2);
@@ -149,7 +149,7 @@ public class TriadicHarmony implements ColorHarmony {
 		int green2 = color;
 		int blue2 = color;
 		if (angle >= 300 && angle < 360) {
-			System.out.println("initial rgb" + " " + -green1 + "," + blue1 + "," + -green1);
+			System.out.println("initial rgb" + " " + green1 + "," + blue1 + "," + green1);
 			System.out.println("the chosen color is: purple");
 			System.out.println("analogous rgb color 1:" + " " + red1 + ", " + green1 + ", " + blue1);
 			System.out.println("analogous rgb color 2:" + " " + red2 + ", " + green2 + ", " + blue2);
