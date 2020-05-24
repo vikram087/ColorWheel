@@ -10,12 +10,11 @@ import java.awt.*;
 
 public class Square extends Polygon //square which holds creators
 {
-	
+
 	public void draw(int xCenter, int yCenter, Graphics2D g2)
 	{
 		String creators = "Created by: Vikram Penumarti, and Richard Zhang";
 		int size = xCenter/2; //size of rectangle
-		
 		
 		g2.setColor(Color.BLACK);
 //		g2.draw(new Rectangle(xCenter - 200, yCenter + 150, 400, 100));//initially wanted fixed position

@@ -8,7 +8,7 @@
 import java.awt.Graphics2D;
 import java.awt.*;
 
-public class Polygon
+public class Polygon//base class
 {	
 	public void draw(int xCenter, int yCenter, Graphics2D g2)
 	{

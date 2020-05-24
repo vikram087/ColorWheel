@@ -5,8 +5,6 @@
  * Notes:
 */
 
-
-
 public class TetradicHarmony implements ColorHarmony
 {
 	//harmonies for each color

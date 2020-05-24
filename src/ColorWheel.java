@@ -43,7 +43,7 @@ public class ColorWheel extends JPanel implements MouseListener
 		int centerY = this.getHeight() / 2;
 
 //		System.out.println(centerX + ", " + centerY);
-		DrawCircle circle = new DrawCircle();
+		Circle circle = new Circle();
 		
 		Polygon square = new Square();
 

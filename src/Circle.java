@@ -15,9 +15,7 @@
 import java.awt.*;
 import java.awt.geom.Arc2D;
 
-
-
-public class Circle extends Polygon
+public class Circle extends Polygon//creation of circles
 {
 	
 	public void draw(int xCenter, int yCenter, Graphics2D g2)
