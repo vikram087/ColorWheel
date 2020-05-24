@@ -44,11 +44,14 @@ public class ColorWheel extends JPanel implements MouseListener
 
 //		System.out.println(centerX + ", " + centerY);
 		DrawCircle circle = new DrawCircle();
+		
+		Polygon square = new Square();
 
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g.create();
 
 		circle.draw(centerX, centerY, g2);
+		square.draw(centerX, centerY, g2);
 	}
 
 	public void mouseClicked(MouseEvent mouse)
