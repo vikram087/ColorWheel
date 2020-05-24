@@ -9,7 +9,7 @@
  * Author: Richard Zhang
  * Date: 4/30/2020
  * Rev:05
- * Notes: The class for drawing a color wheel. Created the basic color wheel using if statements.
+ * Notes: Interface for the colorharmonies
  */
 
 public interface ColorHarmony {

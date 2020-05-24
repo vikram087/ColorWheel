@@ -14,6 +14,7 @@ public class Square extends Polygon //square which holds creators
 	public void draw(int xCenter, int yCenter, Graphics2D g2)
 	{
 		String creators = "Created by: Vikram Penumarti, and Richard Zhang";
+		String instructions = "Click anywhere on the circle";
 		int size = xCenter/2; //size of rectangle
 		
 		g2.setColor(Color.BLACK);
@@ -21,7 +22,8 @@ public class Square extends Polygon //square which holds creators
 //		g2.drawString(creators, xCenter - 130, yCenter + 200);
 
 		g2.draw(new Rectangle(xCenter - size, yCenter + 170, size * 2, size/4));//added scaling
-		g2.drawString(creators, xCenter - 130, yCenter + 200);
+		g2.drawString(instructions, xCenter - 75, yCenter + 210);
+		g2.drawString(creators, xCenter - 130, yCenter + 190);
 		
 	}
 }

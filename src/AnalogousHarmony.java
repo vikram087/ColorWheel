@@ -2,7 +2,7 @@
  * Author: Richard Zhang
  * Date: 5/10/20
  * Rev:01
- * Notes:
+ * Notes: Code for fidning the Analogous Harmony using the interface ColorHarmony
  */
 
 public class AnalogousHarmony implements ColorHarmony {

@@ -2,7 +2,7 @@
  * Author: Richard Zhang
  * Date: 5/21/20
  * Rev:03
- * Notes: Code for Finding the Triadic Harmony from an input from the ColorWheel.
+ * Notes: Code for Finding the Monochromatic Harmony from an input from the ColorWheel.
  */
 
 public class MonochromaticHarmony implements ColorHarmony {

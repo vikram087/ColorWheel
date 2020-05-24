@@ -9,7 +9,7 @@
  * Author: Richard Zhang
  * Date:  5/21/2020
  * Rev:06
- * Notes: The class for drawing a color wheel. Created the basic color wheel using if statements.
+ * Notes: The class that has main method. Calls on methods from all other classes
  */
 
 import java.awt.*;
